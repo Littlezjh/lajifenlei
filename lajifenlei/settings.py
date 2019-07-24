@@ -128,7 +128,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'collectstatic')
+STATIC_ROOT = os.path.join(BASE_DIR, 'collectstatic')
 
 WEIXIN_APP_ID = getLocal("WEIXIN_APP_ID", "")
 WEIXIN_APP_SECRET = getLocal("WEIXIN_APP_SECRET", "")

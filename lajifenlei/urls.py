@@ -27,7 +27,8 @@ urlpatterns = [
     path('upload',upload_view.postImage),
     path('login',views.login),
     path('load_history',upload_view.load_history),
-    path('download',upload_view.download_image)
+    path('download',upload_view.download_image),
+    path('temp',upload_view.recordTempVariate),
 ]
 if settings.DEBUG:
     urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

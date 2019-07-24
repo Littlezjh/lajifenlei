@@ -37,7 +37,7 @@ def classificationImage(imagePath):
     print(os.path.getsize(imagePath)/1024)
     return '书','可回收垃圾'
 
-def compress_image(infile,mb=150,step=10,quality=80):
+def compress_image(infile,mb=150,step=5,quality=40):
     o_size=get_size(infile)
     if o_size<=mb:
         return infile

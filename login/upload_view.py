@@ -93,3 +93,8 @@ def pCalculateMd5(file):
         md5Obj.update(chunk)
     # md5Obj.update(file.read())
     return md5Obj.hexdigest()
+
+#将客户端需要临时保存的变量存在服务器再返回该变量，用于for循环的中的异步下载
+def recordTempVariate(request):
+    temp=request.GET.get('temp')
+    HttpResponse(temp)
