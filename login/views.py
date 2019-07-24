@@ -16,7 +16,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def index(request):
-    print(settings.APPSECRET)
+    # print(settings.APPSECRET)
+    message='ok'
     # if request.method =='POST':
     #     username = request.POST.get('username')
     #     password=request.POST.get('password')
@@ -32,7 +33,7 @@ def index(request):
     # user_list=models.UserInfo.objects.all()
     # # return render(request,'index.html',{'data':user_list})
     return render(request,'index.html',{'data':user_list})
-
+    # return HttpResponse(message)
 
 
 def upload(request):
@@ -107,4 +108,5 @@ def checkPara(dataMap, keyList):
         result.append(value)
 
     return tuple(result)
+
 

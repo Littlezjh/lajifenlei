@@ -38,11 +38,13 @@ def classificationImage(imagePath):
     return '书','可回收垃圾'
 
 def compress_image(infile,mb=150,step=5,quality=40):
+    print('压缩图片中')
     o_size=get_size(infile)
+    outfile = get_outfile(infile)
+    im = Image.open(infile)
+    im.save(outfile, quality=100)
     if o_size<=mb:
-        return infile
-    outfile=get_outfile(infile)
-    print('图片',outfile)
+        return outfile
     while o_size>mb:
         im=Image.open(infile)
         im.save(outfile,quality=quality)

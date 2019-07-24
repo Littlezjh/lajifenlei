@@ -21,7 +21,8 @@ from django.conf import  settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/',views.index),
+    # path('index/',views.index),
+    path('index/', views.index),
     path('search-form',search.search_form),
     path('search',search.search),
     path('upload',upload_view.postImage),

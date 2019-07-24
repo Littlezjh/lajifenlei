@@ -55,7 +55,7 @@ def postImage(request):
     else:
         result['status']='not a post'
     return  HttpResponse(json.dumps(result,ensure_ascii=False),content_type="application/json,charset=utf-8")
-
+    # return  HttpResponse(result)
 #读取最后上传图片的id
 def load_history(request):
     result=[]
@@ -97,4 +97,4 @@ def pCalculateMd5(file):
 #将客户端需要临时保存的变量存在服务器再返回该变量，用于for循环的中的异步下载
 def recordTempVariate(request):
     temp=request.GET.get('temp')
-    HttpResponse(temp)
+    return HttpResponse(temp)
