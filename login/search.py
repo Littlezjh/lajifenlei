@@ -34,11 +34,9 @@ def upload(request):
         return  HttpResponse('OK')
 
 def classificationImage(imagePath):
-    print(os.path.getsize(imagePath)/1024)
     return '书','可回收垃圾'
 
 def compress_image(infile,mb=150,step=5,quality=40):
-    print('压缩图片中')
     o_size=get_size(infile)
     outfile = get_outfile(infile)
     im = Image.open(infile)
